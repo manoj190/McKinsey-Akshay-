@@ -1,0 +1,6 @@
+framework module TouchControls {
+  umbrella header "TouchControls.h"
+
+  export *
+  module * { export * }
+}

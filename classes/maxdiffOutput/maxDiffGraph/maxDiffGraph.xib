@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GOTHICB.TTF">
+            <string>CenturyGothic-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="maxDiffGraph">
+            <connections>
+                <outlet property="badgeCountImg" destination="nuI-w0-Ij1" id="FJa-Xx-Y06"/>
+                <outlet property="badgeCountLbl" destination="OIb-bI-cHG" id="tjb-lu-2SO"/>
+                <outlet property="graphBgImg" destination="qpu-gQ-9ip" id="OZR-k4-hd8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewGraphBtn" destination="nzk-3K-GVW" id="7xi-92-aoc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG.png" translatesAutoresizingMaskIntoConstraints="NO" id="ebP-Bx-eCc">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pointGraphBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="qpu-gQ-9ip">
+                    <rect key="frame" x="0.0" y="103" width="1024" height="617"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4me-nw-K53">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="64"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="navBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="J9p-PK-Ajq">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="64"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="VdB-Fa-elw"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVg-lc-zUK">
+                            <rect key="frame" x="90" y="19" width="30" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="sRg-Zz-mHb"/>
+                                <constraint firstAttribute="width" constant="30" id="yEI-r6-ZFb"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="back-1.png"/>
+                            <connections>
+                                <action selector="backBtnClicked:" destination="-1" eventType="touchUpInside" id="tAg-nf-c4f"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MAX-DIFF GRAPH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh3-kr-Hm0">
+                            <rect key="frame" x="416" y="19" width="192" height="27"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="192" id="RGL-ZU-Sf9"/>
+                                <constraint firstAttribute="height" constant="27" id="S4v-T8-uVJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCd-bn-mak">
+                            <rect key="frame" x="874" y="19" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="25" id="aX6-zJ-eDH"/>
+                                <constraint firstAttribute="height" constant="25" id="dar-ab-tdn"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="notifiacation-1.png"/>
+                            <connections>
+                                <action selector="notificationBtnClicked:" destination="-1" eventType="touchUpInside" id="lJd-kB-gUA"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="notificationRedLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="nuI-w0-Ij1">
+                            <rect key="frame" x="884" y="8" width="21" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIb-bI-cHG">
+                            <rect key="frame" x="886" y="10" width="17" height="17"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="17" id="gq3-hq-GH9"/>
+                                <constraint firstAttribute="width" constant="17" id="zbo-D0-Od2"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIG-50-Nhb">
+                            <rect key="frame" x="926" y="19" width="68" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="68" id="edB-fD-seN"/>
+                                <constraint firstAttribute="height" constant="25" id="i9E-JS-lnE"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
+                            <state key="normal" title="ALIVE 2.0">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="26g-uf-gib">
+                            <rect key="frame" x="30" y="19" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="gcI-je-xuk"/>
+                                <constraint firstAttribute="width" constant="25" id="qKV-ja-pfn"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="HomeBtn1.png"/>
+                            <connections>
+                                <action selector="homeBtnClicked:" destination="-1" eventType="touchUpInside" id="Jac-ph-1am"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzk-3K-GVW">
+                            <rect key="frame" x="828" y="19" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="p81-va-j5X"/>
+                                <constraint firstAttribute="width" constant="25" id="sM6-O7-vqY"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="chart.png"/>
+                            <connections>
+                                <action selector="viewCumulativeGraphBtnClicked:" destination="-1" eventType="touchUpInside" id="PdM-Fb-1it"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="IIG-50-Nhb" secondAttribute="trailing" constant="30" id="7E8-r7-YBj"/>
+                        <constraint firstAttribute="height" constant="64" id="9uB-uN-ObJ"/>
+                        <constraint firstItem="MCd-bn-mak" firstAttribute="leading" secondItem="nzk-3K-GVW" secondAttribute="trailing" constant="21" id="AMq-iL-mUP"/>
+                        <constraint firstAttribute="trailing" secondItem="J9p-PK-Ajq" secondAttribute="trailing" id="ILE-XV-X8R"/>
+                        <constraint firstItem="J9p-PK-Ajq" firstAttribute="leading" secondItem="4me-nw-K53" secondAttribute="leading" id="QVN-9t-o4h"/>
+                        <constraint firstItem="MCd-bn-mak" firstAttribute="top" secondItem="4me-nw-K53" secondAttribute="top" constant="19" id="SgI-7Y-bvc"/>
+                        <constraint firstItem="eh3-kr-Hm0" firstAttribute="centerX" secondItem="J9p-PK-Ajq" secondAttribute="centerX" id="TPw-kN-Wuu"/>
+                        <constraint firstItem="IIG-50-Nhb" firstAttribute="top" secondItem="4me-nw-K53" secondAttribute="top" constant="19" id="ZOC-hD-owA"/>
+                        <constraint firstItem="IIG-50-Nhb" firstAttribute="leading" secondItem="MCd-bn-mak" secondAttribute="trailing" constant="27" id="bHH-oI-tv2"/>
+                        <constraint firstItem="26g-uf-gib" firstAttribute="top" secondItem="4me-nw-K53" secondAttribute="top" constant="19" id="dic-ML-Uf7"/>
+                        <constraint firstItem="J9p-PK-Ajq" firstAttribute="top" secondItem="4me-nw-K53" secondAttribute="top" id="eTK-np-5vK"/>
+                        <constraint firstItem="eh3-kr-Hm0" firstAttribute="top" secondItem="4me-nw-K53" secondAttribute="top" constant="19" id="iEn-ug-jG6"/>
+                        <constraint firstItem="IIG-50-Nhb" firstAttribute="leading" secondItem="OIb-bI-cHG" secondAttribute="trailing" constant="23" id="kKx-VN-5wq"/>
+                        <constraint firstItem="eh3-kr-Hm0" firstAttribute="centerY" secondItem="4me-nw-K53" secondAttribute="centerY" id="lCd-uT-fcx"/>
+                        <constraint firstItem="QVg-lc-zUK" firstAttribute="leading" secondItem="26g-uf-gib" secondAttribute="trailing" constant="35" id="nwk-Ci-RPi"/>
+                        <constraint firstItem="26g-uf-gib" firstAttribute="leading" secondItem="4me-nw-K53" secondAttribute="leading" constant="30" id="sow-15-Sfa"/>
+                        <constraint firstItem="nzk-3K-GVW" firstAttribute="top" secondItem="4me-nw-K53" secondAttribute="top" constant="19" id="ti7-Na-Xxg"/>
+                        <constraint firstItem="QVg-lc-zUK" firstAttribute="top" secondItem="4me-nw-K53" secondAttribute="top" constant="19" id="xcy-zQ-h87"/>
+                        <constraint firstItem="OIb-bI-cHG" firstAttribute="top" secondItem="4me-nw-K53" secondAttribute="top" constant="10" id="ykH-lo-rZh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="qpu-gQ-9ip" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6iF-LO-QBo"/>
+                <constraint firstAttribute="bottom" secondItem="qpu-gQ-9ip" secondAttribute="bottom" constant="48" id="Keh-oQ-Rtp"/>
+                <constraint firstAttribute="trailing" secondItem="4me-nw-K53" secondAttribute="trailing" id="QWG-tB-JPM"/>
+                <constraint firstAttribute="bottom" secondItem="ebP-Bx-eCc" secondAttribute="bottom" id="RvK-tk-gwk"/>
+                <constraint firstItem="qpu-gQ-9ip" firstAttribute="top" secondItem="4me-nw-K53" secondAttribute="bottom" constant="39" id="Vny-1A-XPL"/>
+                <constraint firstItem="4me-nw-K53" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="W8u-J2-nJM"/>
+                <constraint firstItem="ebP-Bx-eCc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eWi-sU-cAX"/>
+                <constraint firstItem="4me-nw-K53" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mk2-9b-66p"/>
+                <constraint firstAttribute="trailing" secondItem="ebP-Bx-eCc" secondAttribute="trailing" id="pbF-kj-ims"/>
+                <constraint firstAttribute="trailing" secondItem="qpu-gQ-9ip" secondAttribute="trailing" id="vd2-St-kQg"/>
+                <constraint firstItem="ebP-Bx-eCc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yQt-ym-KIs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="1853" y="178"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BG.png" width="1024" height="768"/>
+        <image name="HomeBtn1.png" width="25" height="25"/>
+        <image name="back-1.png" width="33" height="26"/>
+        <image name="chart.png" width="20" height="20"/>
+        <image name="navBar.png" width="1024" height="58"/>
+        <image name="notifiacation-1.png" width="25" height="25"/>
+        <image name="notificationRedLogo.png" width="19" height="19"/>
+        <image name="pointGraphBg.png" width="950" height="459"/>
+    </resources>
+</document>
